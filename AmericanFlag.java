@@ -13,15 +13,15 @@ public class AmericanFlag {
 	public AmericanFlag (int x, int y, double scale) {
 		setX(x);
 		setY(y);
-		setH((int)(10));
-		setW((int)(5*1.9*26));
+		setH((int)(20));
+		setW((int)(10*1.9*26));
 
 
 	}
 	
 	public void draw(Graphics g) {
 		for (int i = 0; i < 13; i++) {
-			y = y + 10;
+			y = y + 20;
 			if (i % 2 == 0) {
 				redStripe(this.x, this.y, h, w, g);
 			} else {
@@ -29,7 +29,7 @@ public class AmericanFlag {
 			}
 		}
 
-		union(this.x, this.y-120, h, w, g);
+		union(this.x, this.y-240, h, w, g);
 	}
 
 	public void redStripe(int x, int y, int height, int width, Graphics g) {
@@ -49,8 +49,8 @@ public class AmericanFlag {
 	public void union(int x, int y, int height, int width, Graphics g) {
 
 		g.setColor(Color.blue);
-		height = 70;
-		width = 110;
+		height = 140;
+		width = 200;
 		g.fillRect(x, y, width, height);
 
 	}
